@@ -1,0 +1,1162 @@
+/** ADD YOUR AWESOME CODES HERE **/
+@media (min-width: 992px){
+    .dropdown-menu .dropdown-toggle:after{
+      border-top: .3em solid transparent;
+      border-right: 0;
+      border-bottom: .3em solid transparent;
+      border-left: .3em solid;
+  }
+
+  .dropdown-menu .dropdown-menu{
+      margin-left:0; margin-right: 0;
+  }
+
+  .dropdown-menu li{
+      position: relative;
+  }
+  .nav-item .submenu{ 
+      display: none;
+      position: absolute;
+      left:100%; top:-7px;
+  }
+  .nav-item .submenu-left{ 
+      right:100%; left:auto;
+  }
+
+  .dropdown-menu > li:hover{ background-color: #f1f1f1 }
+  .dropdown-menu > li:hover > .submenu{
+      display: block;
+  }
+}
+.dd {
+  position: relative;
+  }
+ .dd .dropdown-icon{
+      display: none;
+      position: absolute;
+      padding: 15px;
+      background: #fff;
+      right: 10px;
+      top: 2px;
+}
+
+ .dd .dropdown-icon::before {
+  transition: all ease 0.5s;
+    background: #444;
+    height: 2px;
+    width: 16px;
+    top: 14px;
+    left: 7px;
+    content: "";
+    position: absolute;
+}
+ .dd .dropdown-icon::after{
+  transition: all ease 0.5s;
+                    background: #444;
+                    content: "";
+                    height: 16px;
+                    left: 14px;
+                    position: absolute;
+                    top: 7px;
+                    width: 2px;
+}
+
+.dd.show .dropdown-icon::after{
+    transform:rotate(-90deg);
+}
+
+.dd.show .dropdown-icon::before{
+   transform:rotate(-100deg);
+}
+
+.dd .dropdown-toggle .dropdown-icon{
+     display:none;
+ }
+
+@media(max-width:992px){
+  .navbar .dropdown .dd .dropdown-toggle::after{
+     display:none;
+  }
+  .navbar .dropdown .dd .dropdown-toggle .dropdown-icon{
+     display:block;
+  }
+  .navbar .dropdown  .dd .dropdown-menu .dropdown-item{
+      white-space:pre-wrap;
+  }
+}
+/*about*/
+
+#about-slider .alpha{
+  background-color: rgba(0,0,0,0.4);
+}
+
+#about-slider h2{
+  margin-top: 17rem;
+  font-weight: 900;
+  font-size: 7rem;
+}
+#about-slider h2:hover + hr{
+  width: 28rem; 
+  transition-duration: 0.5s;
+  border-radius: 50%;
+}
+#about-slider hr{
+  width: 5rem;
+  border: 2px solid white;
+  transition-duration: 0.5s;
+}
+
+
+
+
+/*products*/
+
+/*#products{
+	height: 49rem;
+	background-image: url(../images/agriculture.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}*/
+#products .alpha{
+	background-color: rgba(0,0,0,0.5);
+}
+#products h1{
+	margin-top : 19rem;
+}
+#products h1:hover + hr{
+  width: 28rem; 
+  transition-duration: 0.5s;
+  border-radius: 50%;
+}
+#products hr{
+  width: 5rem;
+  border: 2px solid white;
+  transition-duration: 0.5s;
+}
+#products hr
+
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+.portfolio-wrap, .portfolio-wrap1{
+	box-shadow: 0px 1px 5px black;
+}
+.portfolio .portfolio-item {
+  margin-bottom: 30px;
+}
+
+.portfolio #portfolio-flters {
+  padding: 0;
+  margin: 0 auto 15px auto;
+  list-style: none;
+  text-align: center;
+  border-radius: 50px;
+  padding: 2px 15px;
+}
+
+.portfolio #portfolio-flters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 8px 16px 10px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 0 3px 10px 3px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 4px;
+}
+
+.portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
+  background: #18d26e;
+}
+
+.portfolio #portfolio-flters li:last-child {
+  margin-right: 0;
+}
+
+.portfolio .portfolio-wrap, .portfolio-wrap1 {
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.portfolio .portfolio-wrap::before {
+  content: "";
+  background: rgba(255, 0, 0, 0.6);
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  top: 30px;
+  bottom: 30px;
+  transition: all ease-in-out 0.3s;
+  z-index: 2;
+  opacity: 0;
+}
+
+.portfolio .portfolio-wrap .portfolio-info, .portfolio-wrap1 .portfolio-info {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 3;
+  transition: all ease-in-out 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio .portfolio-wrap .portfolio-info::before, .portfolio-wrap1 .portfolio-info::before {
+  display: block;
+  content: "";
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 35px;
+  left: 35px;
+  border-top: 3px solid #fff;
+  border-left: 3px solid #fff;
+  transition: all 0.5s ease 0s;
+  z-index: 9994;
+}
+
+.portfolio .portfolio-wrap .portfolio-info::after, .portfolio-wrap1 .portfolio-info::after {
+  display: block;
+  content: "";
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  bottom: 35px;
+  right: 35px;
+  border-bottom: 3px solid #fff;
+  border-right: 3px solid #fff;
+  transition: all 0.5s ease 0s;
+  z-index: 9994;
+}
+
+.portfolio .portfolio-wrap .portfolio-info h4, .portfolio-wrap1 .portfolio-info h4 {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.portfolio .portfolio-wrap .portfolio-info p, .portfolio-wrap1 .portfolio-info p {
+  color: #ffffff;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+}
+
+.portfolio .portfolio-wrap .portfolio-links, .portfolio-wrap1 .portfolio-links {
+  text-align: center;
+  z-index: 4;
+}
+
+.portfolio .portfolio-wrap .portfolio-links a, .portfolio-wrap1 .portfolio-links a {
+  color: #fff;
+  margin: 0 2px;
+  font-size: 28px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.portfolio .portfolio-wrap .portfolio-links a:hover, .portfolio-wrap1 .portfolio-links a:hover {
+  color: #63eda3;
+}
+
+.portfolio .portfolio-wrap:hover::before, .portfolio-wrap1:hover::before {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+}
+
+.portfolio .portfolio-wrap:hover .portfolio-info, .portfolio-wrap1:hover .portfolio-info {
+  opacity: 1;
+}
+
+.portfolio .portfolio-wrap:hove .portfolio-info::beforer, .portfolio-wrap1:hover .portfolio-info::before {
+  top: 15px;
+  left: 15px;
+}
+
+.portfolio .portfolio-wrap:hover .portfolio-info::after, .portfolio-wrap1:hover  .portfolio-info::after {
+  bottom: 15px;
+  right: 15px;
+}
+
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+.contact .info-box {
+  color: #444444;
+  padding: 20px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.contact .info-box i.bx {
+  font-size: 24px;
+  color: #18d26e;
+  border-radius: 50%;
+  padding: 14px;
+  float: left;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.contact .info-box h3 {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 700;
+  margin: 10px 0 8px 68px;
+}
+
+.contact .info-box p {
+  padding: 0;
+  color: #fff;
+  line-height: 24px;
+  font-size: 14px;
+  margin: 0 0 0 68px;
+}
+
+.contact .info-box .social-links {
+  margin: 5px 0 0 68px;
+  display: flex;
+}
+
+.contact .info-box .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  color: #fff;
+  line-height: 1;
+  margin-right: 12px;
+  transition: 0.3s;
+}
+
+.contact .info-box .social-links a:hover {
+  color: #18d26e;
+}
+
+.contact .php-email-form {
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.contact .php-email-form .validate {
+  display: none;
+  color: red;
+  margin: 0 0 15px 0;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.contact .php-email-form .error-message {
+  display: none;
+  background: rgba(255, 255, 255, 0.08);
+  background: #ed3c0d;
+  text-align: left;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.contact .php-email-form .error-message br + br {
+  margin-top: 25px;
+}
+
+.contact .php-email-form .sent-message {
+  display: none;
+  background: rgba(255, 255, 255, 0.08);
+  background: #18d26e;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.contact .php-email-form .loading {
+  display: none;
+  background: rgba(255, 255, 255, 0.08);
+  text-align: center;
+  padding: 15px;
+}
+
+.contact .php-email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid #18d26e;
+  border-top-color: #eee;
+  -webkit-animation: animate-loading 1s linear infinite;
+  animation: animate-loading 1s linear infinite;
+}
+
+.contact .php-email-form input, .contact .php-email-form textarea {
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 0;
+  transition: 0.3s;
+  color: #fff;
+}
+
+.contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
+  background-color: rgba(255, 255, 255, 0.11);
+}
+
+.contact .php-email-form input::-webkit-input-placeholder, .contact .php-email-form textarea::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.3);
+  opacity: 1;
+}
+
+.contact .php-email-form input::-moz-placeholder, .contact .php-email-form textarea::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.3);
+  opacity: 1;
+}
+
+.contact .php-email-form input:-ms-input-placeholder, .contact .php-email-form textarea:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.3);
+  opacity: 1;
+}
+
+.contact .php-email-form input::-ms-input-placeholder, .contact .php-email-form textarea::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.3);
+  opacity: 1;
+}
+
+.contact .php-email-form input::placeholder, .contact .php-email-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+  opacity: 1;
+}
+
+.contact .php-email-form input {
+  border: 2px solid transparent;
+  padding: 20px 15px;
+}
+
+.contact .php-email-form textarea {
+  padding: 12px 15px;
+  border: 2px solid transparent;
+}
+
+.contact .php-email-form input:focus{
+  border: 2px solid #18d26e;
+}
+.contact .php-email-form textarea:focus{
+  border: 2px solid #18d26e;
+}
+
+.contact .php-email-form button[type="submit"] {
+  background: #18d26e;
+  border: 0;
+  padding: 10px 30px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 4px;
+}
+
+.contact .php-email-form button[type="submit"]:hover {
+  background: #15bb62;
+}
+
+@-webkit-keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*--------------------------------------------------------------
+# Portfolio Details
+--------------------------------------------------------------*/
+.portfolio-details {
+  padding-top: 40px;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
+}
+
+.portfolio-details .container {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.portfolio-details .portfolio-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.portfolio-details .portfolio-details-carousel .owl-nav, .portfolio-details .portfolio-details-carousel .owl-dots {
+  margin-top: 5px;
+  text-align: center;
+}
+
+.portfolio-details .portfolio-details-carousel .owl-dot {
+  display: inline-block;
+  margin: 0 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.portfolio-details .portfolio-details-carousel .owl-dot.active {
+  background-color: #18d26e !important;
+}
+
+.portfolio-details .portfolio-info {
+  padding-top: 45px;
+}
+
+.portfolio-details .portfolio-info h3 {
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.portfolio-details .portfolio-info ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+
+.portfolio-details .portfolio-info ul li + li {
+  margin-top: 10px;
+}
+
+.portfolio-details .portfolio-info p {
+  font-size: 15px;
+  padding: 15px 0 0 0;
+}
+
+@media (max-width: 992px) {
+  .portfolio-details .portfolio-info {
+    padding-top: 20px;
+  }
+}
+
+
+/*inner products*/
+
+/*acid blue 80*/
+#acid-blue-80{
+  height: 45rem;
+  background-image: url(../images/Acid_Blue_80.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#acid-blue-80 .alpha{
+  background-color: rgba(0,0,0,0.5);
+}
+#acid-blue-80 h1{
+  margin-top : 19rem;
+}
+#acid-blue-80 h1:hover + hr{
+  width: 28rem; 
+  transition-duration: 0.5s;
+  border-radius: 50%;
+}
+#acid-blue-80 hr{
+  width: 5rem;
+  border: 2px solid white;
+  transition-duration: 0.5s;
+}
+
+/*acid blue 9*/
+#acid-blue-9{
+  height: 45rem;
+  background-image: url(../images/Acid_Blue_80.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#acid-blue-9 .alpha{
+  background-color: rgba(0,0,0,0.5);
+}
+#acid-blue-9 h1{
+  margin-top : 19rem;
+}
+#acid-blue-9 h1:hover + hr{
+  width: 28rem; 
+  transition-duration: 0.5s;
+  border-radius: 50%;
+}
+#acid-blue-9 hr{
+  width: 5rem;
+  border: 2px solid white;
+  transition-duration: 0.5s;
+}
+
+/*acid green 25*/
+#acid-Green-25{
+  height: 45rem;
+  background-image: url(../images/Acid-Green-25.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#acid-Green-25 .alpha{
+  background-color: rgba(0,0,0,0.5);
+}
+#acid-Green-25 h1{
+  margin-top : 19rem;
+}
+#acid-Green-25 h1:hover + hr{
+  width: 28rem; 
+  transition-duration: 0.5s;
+  border-radius: 50%;
+}
+#acid-Green-25 hr{
+  width: 5rem;
+  border: 2px solid white;
+  transition-duration: 0.5s;
+}
+
+/*acide red 33*/
+#acid-red-33{
+  height: 45rem;
+  background-image: url(../images/Acid-Red-33.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#acid-red-33 .alpha{
+  background-color: rgba(0,0,0,0.5);
+}
+#acid-red-33 h1{
+  margin-top : 19rem;
+}
+#acid-red-33 h1:hover + hr{
+  width: 28rem; 
+  transition-duration: 0.5s;
+  border-radius: 50%;
+}
+#acid-red-33 hr{
+  width: 5rem;
+  border: 2px solid white;
+  transition-duration: 0.5s;
+}
+/*acide red 52*/
+#acid-red-52{
+  height: 45rem;
+  background-image: url(../images/Acid-Red-52.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#acid-red-52 .alpha{
+  background-color: rgba(0,0,0,0.5);
+}
+#acid-red-52 h1{
+  margin-top : 19rem;
+}
+#acid-red-52 h1:hover + hr{
+  width: 28rem; 
+  transition-duration: 0.5s;
+  border-radius: 50%;
+}
+#acid-red-52 hr{
+  width: 5rem;
+  border: 2px solid white;
+  transition-duration: 0.5s;
+}
+/*acide violet 17*/
+#acid-violet-17{
+  height: 45rem;
+  background-image: url(../images/Acid-Violet-17.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#acid-violet-17 .alpha{
+  background-color: rgba(0,0,0,0.5);
+}
+#acid-violet-17 h1{
+  margin-top : 19rem;
+}
+#acid-violet-17 h1:hover + hr{
+  width: 28rem; 
+  transition-duration: 0.5s;
+  border-radius: 50%;
+}
+#acid-violet-17 hr{
+  width: 5rem;
+  border: 2px solid white;
+  transition-duration: 0.5s;
+}
+
+
+.acid-img{
+  width: 100%;
+  height: 30rem;
+  overflow: hidden;
+  box-shadow: -4px 0px 6px black;
+}
+.acid-img img{
+  width: 100%;
+  transition-duration: 1s;
+}
+.acid-img:hover img{
+  transform: scale(1.3);
+  transition-duration: 1s;
+}
+.acide-detail table{
+  height: 30rem;
+}
+.acide-detail table, tr, td{
+  border : 2px solid black;
+}
+
+
+/*reactive dyes*/
+ 
+ /*black WNN*/
+
+ #black-wnn{
+  height: 45rem;
+  background-image: url(../images/Black-WNN.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#black-wnn .alpha{
+  background-color: rgba(0,0,0,0.5);
+}
+#black-wnn h1{
+  margin-top : 19rem;
+}
+#black-wnn h1:hover + hr{
+  width: 28rem; 
+  transition-duration: 0.5s;
+  border-radius: 50%;
+}
+#black-wnn hr{
+  width: 5rem;
+  border: 2px solid white;
+  transition-duration: 0.5s;
+}
+
+ /*reactive black 5*/
+
+ #reactive-black-5{
+  height: 45rem;
+  background-image: url(../images/Reactive-Black-5.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#reactive-black-5 .alpha{
+  background-color: rgba(0,0,0,0.5);
+}
+#reactive-black-5 h1{
+  margin-top : 19rem;
+}
+#reactive-black-5 h1:hover + hr{
+  width: 28rem; 
+  transition-duration: 0.5s;
+  border-radius: 50%;
+}
+#reactive-black-5 hr{
+  width: 5rem;
+  border: 2px solid white;
+  transition-duration: 0.5s;
+}
+
+ /*reactive red 195*/
+
+ #reactive-red-195{
+  height: 45rem;
+  background-image: url(../images/Reactive-Red-195.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#reactive-red-195 .alpha{
+  background-color: rgba(0,0,0,0.5);
+}
+#reactive-red-195 h1{
+  margin-top : 19rem;
+}
+#reactive-red-195 h1:hover + hr{
+  width: 28rem; 
+  transition-duration: 0.5s;
+  border-radius: 50%;
+}
+#reactive-red-195 hr{
+  width: 5rem;
+  border: 2px solid white;
+  transition-duration: 0.5s;
+}
+
+/*reactive red CD*/
+
+ #reactive-red-cd{
+  height: 45rem;
+  background-image: url(../images/Reactive-Red-CD.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#reactive-red-cd .alpha{
+  background-color: rgba(0,0,0,0.5);
+}
+#reactive-red-cd h1{
+  margin-top : 19rem;
+}
+#reactive-red-cd h1:hover + hr{
+  width: 28rem; 
+  transition-duration: 0.5s;
+  border-radius: 50%;
+}
+#reactive-red-cd hr{
+  width: 5rem;
+  border: 2px solid white;
+  transition-duration: 0.5s;
+}
+
+/*reactive yellow 145*/
+
+ #reactive-yellow-145{
+  height: 45rem;
+  background-image: url(../images/reactive-yellow-145.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#reactive-yellow-145 .alpha{
+  background-color: rgba(0,0,0,0.5);
+}
+#reactive-yellow-145 h1{
+  margin-top : 19rem;
+}
+#reactive-yellow-145 h1:hover + hr{
+  width: 28rem; 
+  transition-duration: 0.5s;
+  border-radius: 50%;
+}
+#reactive-yellow-145 hr{
+  width: 5rem;
+  border: 2px solid white;
+  transition-duration: 0.5s;
+}
+
+/*reactive yellow 186*/
+
+ #reactive-yellow-186{
+  height: 45rem;
+  background-image: url(../images/Reactive-Yellow-186.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#reactive-yellow-186 .alpha{
+  background-color: rgba(0,0,0,0.5);
+}
+#reactive-yellow-186 h1{
+  margin-top : 19rem;
+}
+#reactive-yellow-186 h1:hover + hr{
+  width: 28rem; 
+  transition-duration: 0.5s;
+  border-radius: 50%;
+}
+#reactive-yellow-186 hr{
+  width: 5rem;
+  border: 2px solid white;
+  transition-duration: 0.5s;
+}
+
+/*reactive yellow 86*/
+
+ #reactive-yellow-86{
+  height: 45rem;
+  background-image: url(../images/Reactive-Yellow-86.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#reactive-yellow-86 .alpha{
+  background-color: rgba(0,0,0,0.5);
+}
+#reactive-yellow-86 h1{
+  margin-top : 19rem;
+}
+#reactive-yellow-86 h1:hover + hr{
+  width: 28rem; 
+  transition-duration: 0.5s;
+  border-radius: 50%;
+}
+#reactive-yellow-86 hr{
+  width: 5rem;
+  border: 2px solid white;
+  transition-duration: 0.5s;
+}
+
+/*Infrastructure*/
+
+/*#Infrastructure{
+  height: 49rem;
+  background-image: url(../images/infrastructure/equipments.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}*/
+#Infrastructure .alpha{
+  background-color: rgba(0,0,0,0.5);
+}
+#Infrastructure h1{
+  margin-top : 19rem;
+}
+
+
+/*polymer*/
+
+#polymer{
+  height: 49rem;
+  background-image: url(../images/Polymer-Soluble-Solvent-Dyes.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#polymer .alpha{
+  background-color: rgba(0,0,0,0.5);
+}
+#polymer h1{
+  margin-top : 19rem;
+}
+
+
+
+/*Fluorescent*/
+
+#Fluorescent{
+  height: 49rem;
+  background-image: url(../images/Fluorescent-Solvent-Dyes.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#Fluorescent .alpha{
+  background-color: rgba(0,0,0,0.5);
+}
+#Fluorescent h1{
+  margin-top : 19rem;
+}
+
+
+/*Metal*/
+
+#Metal{
+  height: 49rem;
+  background-image: url(../images/Metal-Complex-Solvent-Dyes.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#Metal .alpha{
+  background-color: rgba(0,0,0,0.5);
+}
+#Metal h1{
+  margin-top : 19rem;
+}
+
+
+
+/*Infrastructure*/
+
+#Infrastructure{
+  height: 49rem;
+  background-image: url(../images/glass-lined-reactor.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#Infrastructure .alpha{
+  background-color: rgba(0,0,0,0.5);
+}
+
+#Infrastructure h1:hover + hr{
+  width: 28rem; 
+  transition-duration: 0.5s;
+  border-radius: 50%;
+}
+#Infrastructure hr{
+  width: 5rem;
+  border: 2px solid white;
+  transition-duration: 0.5s;
+}
+
+
+.portfolio .portfolio-wrap1::before {
+  content: "";
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  top: 30px;
+  bottom: 30px;
+  transition: all ease-in-out 0.3s;
+  z-index: 2;
+  opacity: 0;
+}
+
+.portfolio-wrap1{
+  overflow: hidden;
+  transition-duration: 1s;
+}
+.portfolio-wrap1:hover img{
+  transform: scale(1.3);
+  transition-duration: 1s;
+}
+
+
+/*quality*/
+
+/*#quality-slider{
+  background-image: url(../images/food.jpg);
+}
+*/
+#quality-slider .alpha{
+  background-color: rgba(0,0,0,0.4);
+}
+
+#quality-slider h2{
+  margin-top: 17rem;
+  font-weight: 900;
+  font-size: 7rem;
+}
+#quality-slider h2:hover + hr{
+  width: 28rem; 
+  transition-duration: 0.5s;
+  border-radius: 50%;
+}
+#quality-slider hr{
+  width: 5rem;
+  border: 2px solid white;
+  transition-duration: 0.5s;
+}
+
+/*heading style is here*/
+.head h1{
+  font-size: 35px;
+}
+.t-head{
+  text-align: center;
+}
+
+/*tables styles are goes here*/
+.bg-color{
+  background-color: red;
+}
+.bg-color1{
+  background-color: blue;
+}
+.bg-color2{
+  background-color: green;
+}
+.bg-color3{
+  background-color:orange;
+}
+.bg-color4{
+  background-color: darkviolet;
+}
+.bg-color5{
+  background-color: yellow;
+}
+.bg-color6{
+  background-color: black;
+}
+.bg-color7{
+  background-color: brown;
+}
+.bg-color8{
+  background-color: purple;
+}
+.bg-color9{
+  background-color: royalblue;
+}
+.bg-color10{
+  background-color: darkgreen;
+}
+.bg-color11{
+  background-color: lightgreen;
+}
+.bg-color12{
+  background-color: maroon;
+}
+/*end of tables styles*/
+
+
+/*quality*/
+
+#quality .img{
+  overflow: hidden;
+  transition-duration: 1s;
+}
+#quality .img:hover img{
+  transform: scale(1.3);
+  transition-duration: 1s;
+}
+
+.slide_text {
+  display: block !important;
+  text-align: center !important;
+}
+
+#sitemap {
+  background: url("../images/slider/food.jpg");
+  background-size: cover;
+  height: 400px;
+  background-position: center;
+}
+.siteAplha {
+  background: rgba(0,0,0, 0.6);
+  height: 400px;
+}
+#sitemap h3{
+  align-items: center;
+  padding-top: 12%;
+  justify-content: center;
+}
